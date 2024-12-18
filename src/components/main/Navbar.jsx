@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 // Impor gambar lokal
-import Logo from "@/assets/Logo/Logo.png";
+import Logo from "@/assets/Logo/LOGO.png";
 
 const NavItem = ({ to, children, active }) => (
   <Link
@@ -59,19 +59,11 @@ export default function DynamicNavbar() {
       <div className="container flex h-24 items-center p-9">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
-            <img
-              src={Logo}
-              alt="Logo"
-              className="h-auto w-20"
-            />
+            <img src={Logo} alt="Logo" className="h-auto w-20" />
           </Link>
           <div className="flex items-center space-x-6 text-sm font-medium">
             {NavData.map((data) => (
-              <NavItem
-                key={data.label}
-                to={data.to}
-                active={isActive(data.to)}
-              >
+              <NavItem key={data.label} to={data.to} active={isActive(data.to)}>
                 {data.label}
               </NavItem>
             ))}
