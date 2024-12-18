@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { arsipDataDummy } from "@/utils/dummy";
+import { arsipDataDummy } from "@/utils/dataKegiatan";
 
 export default function DetailArsip() {
   const { id } = useParams();
